@@ -58,21 +58,5 @@
       </div>
       {{ partial "footer.html" . }}
     </main>
-
-    {{ template "_internal/google_analytics.html" . }}
-
-  <script src="{{ "js/app.js" | relURL }}"></script>
-  {{ with .Site.Params.fixedbarContentAfter }}
-  <script>
-  (function($) {
-    $(function() {
-      $('#privateTrigger').on('click', function() {
-        $('.private').slideToggle();
-        $('#privateTriggerText').text("{{ . }}");
-      });
-    });
-   })(jQuery);
-  </script>
-  {{ end }}
   </body>
 </html>
